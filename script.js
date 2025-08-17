@@ -29,7 +29,36 @@ function afficherMessage() {
    const index = Math.floor(Math.random() * messages.length);
    document.getElementById("message").textContent = messages[index];
 }
+// Gestion du formulaire de newsletter
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("newsletter-form");
+    const message = document.getElementById("confirmation-message");
 
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // empêche le rechargement de la page
+        const email = document.getElementById("email").value;
+
+        if (email) {
+            message.classList.remove("hidden");
+            form.reset();
+        }
+    });
+
+    // --- Message du jour ---
+    const messages = [
+        "Aujourd’hui, écoute ton intuition : elle t’ouvrira des portes insoupçonnées 🌙",
+        "Un vent de nouveauté souffle : sois prêt à accueillir le changement ✨",
+        "Les planètes te rappellent que la patience est une force intérieure 🌌",
+        "La lumière des étoiles guide ton chemin, avance avec confiance 🌟",
+        "Chaque fin cache un nouveau départ, laisse les astres t’accompagner 🔮",
+        "Ton énergie est précieuse : protège-la et partage-la avec sagesse ☀️",
+        "Aujourd’hui, célèbre même les petites victoires 🌠"
+    ];
+
+    const messageDuJour = document.getElementById("message-du-jour");
+    const index = new Date().getDate() % messages.length;
+    messageDuJour.textContent = messages[index];
+});
 // Horoscope quotidien
 function afficherHoroscope() {
    const signe = document.getElementById("signe").value;
