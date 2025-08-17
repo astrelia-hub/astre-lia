@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Astrélia - Univers des étoiles</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Fond animé d'étoiles -->
+   <div id="stars"></div>
+
+   <!-- Menu fixe -->
+   <header>
+       <nav>
+           <ul>
+               <li><a href="#presentation">Accueil</a></li>
+               <li><a href="#interaction">Message du jour</a></li>
+               <li><a href="#horoscope">Horoscope</a></li>
+               <li><a href="#contact">Contact</a></li>
+           </ul>
+       </nav>
+       <div class="header-content">
+           <h1>Astrélia</h1>
+           <p>Plongez dans l’univers mystérieux des étoiles ✨</p>
+       </div>
+   </header>
+
+   <main>
+       <!-- Présentation du site -->
+       <section id="presentation">
+           <h2>Bienvenue dans l’univers des étoiles</h2>
+           <p>
+               L’astrologie, art millénaire, trouve une partie de ses racines dans l’Égypte antique,
+               là où les prêtres observaient les mouvements du Soleil, de la Lune et des étoiles
+               pour comprendre le monde et guider la vie des hommes.
+           </p>
+           <p>
+               Aujourd’hui, nous perpétuons cette tradition en y mêlant précision et modernité.
+               Les planètes ne cessent de voyager dans le ciel, chacune suivant sa course unique —
+               parfois rapide comme la Lune, parfois lente comme Saturne — influençant nos énergies,
+               nos émotions et notre chemin de vie.
+           </p>
+           <p>
+               Ici, vous découvrirez vos prévisions personnalisées, des analyses détaillées de vos signes,
+               et des explications claires sur les mouvements célestes.
+           </p>
+           <p>
+               Que vous soyez curieux ou passionné, laissez-vous guider… car les étoiles ont toujours quelque chose à vous dire.
+           </p>
+       </section>
+
+       <!-- Message du jour -->
+       <section id="interaction">
+           <h2>Message du jour ✨</h2>
+           <p id="message"></p>
+           <button onclick="afficherMessage()">Voir mon message astrologique</button>
+       </section>
+
+       <!-- Horoscope quotidien -->
+       <section id="horoscope">
+           <h2>Horoscope quotidien</h2>
+           <label for="signe">Choisissez votre signe :</label>
+           <select id="signe">
+               <option value="Bélier">Bélier</option>
+               <option value="Taureau">Taureau</option>
+               <option value="Gémeaux">Gémeaux</option>
+               <option value="Cancer">Cancer</option>
+               <option value="Lion">Lion</option>
+               <option value="Vierge">Vierge</option>
+               <option value="Balance">Balance</option>
+               <option value="Scorpion">Scorpion</option>
+               <option value="Sagittaire">Sagittaire</option>
+               <option value="Capricorne">Capricorne</option>
+               <option value="Verseau">Verseau</option>
+               <option value="Poissons">Poissons</option>
+           </select>
+           <button onclick="afficherHoroscope()">Voir mon horoscope</button>
+           <p id="horoscopeResult"></p>
+       </section>
+
+       <!-- Contact -->
+       <section id="contact">
+           <h2>Contactez-nous</h2>
+           <p>Envoyez-nous un message via notre formulaire ou par email : contact@astrelia.com</p>
+       </section>
+   </main>
+
+   <footer>
+       <p>&copy; 2025 Astrélia. Tous droits réservés.</p>
+   </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
