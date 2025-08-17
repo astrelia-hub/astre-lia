@@ -1,0 +1,149 @@
+/* Corps de page */
+body {
+   background-color: #f5e6d3; /* beige sable du désert */
+   font-family: 'Georgia', serif;
+   color: #3b1f2b;
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+   overflow-x: hidden;
+}
+
+/* Fond étoiles */
+#stars {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   z-index: 0;
+   overflow: hidden;
+}
+
+.star {
+   position: absolute;
+   background-color: #ffd700; /* doré */
+   border-radius: 50%;
+   opacity: 0.8;
+   animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+   0%, 100% { opacity: 0.3; transform: translateY(0); }
+   50% { opacity: 1; transform: translateY(-10px); }
+}
+
+/* Menu fixe */
+header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 2;
+}
+
+nav {
+   background-color: rgba(125, 78, 125, 0.95); /* violet semi-transparent */
+   padding: 10px 0;
+   text-align: center;
+}
+
+nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+nav ul li {
+   margin: 0 15px;
+}
+
+nav ul li a {
+   color: #f9e4b7;
+   text-decoration: none;
+   font-weight: bold;
+   transition: color 0.3s;
+}
+
+nav ul li a:hover {
+   color: #ffd700;
+}
+
+/* Header parallax */
+.header-content {
+   text-align: center;
+   padding: 150px 20px 50px 20px;
+   background: url('https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?fit=crop&w=1500&h=500') center/cover no-repeat fixed;
+   color: #f9e4b7;
+   text-shadow: 2px 2px 5px #3b1f2b;
+}
+
+.header-content h1 {
+   font-size: 4em;
+   margin: 0;
+}
+
+.header-content p {
+   font-size: 1.5em;
+}
+
+/* Contenu principal */
+main {
+   padding: 30px;
+   max-width: 900px;
+   margin: 400px auto 0 auto; /* décalage pour menu fixe et header */
+   position: relative;
+   z-index: 1;
+}
+
+/* Sections */
+section {
+   margin-bottom: 60px;
+}
+
+section h2 {
+   color: #5e2a5e;
+   border-bottom: 2px solid #c9a052;
+   padding-bottom: 5px;
+}
+
+/* Boutons */
+button {
+   background-color: #7d4e7d;
+   color: #f9e4b7;
+   padding: 10px 20px;
+   border: 2px solid #c9a052;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 10px;
+   transition: all 0.3s;
+}
+
+button:hover {
+   background-color: #5e2a5e;
+   color: #ffd700;
+   border-color: #ffd700;
+}
+
+/* Champs de sélection */
+select {
+   padding: 5px 10px;
+   border: 2px solid #c9a052;
+   border-radius: 5px;
+   background-color: #f5e6d3;
+   color: #3b1f2b;
+   font-size: 1em;
+}
+
+/* Pied de page */
+footer {
+   background-color: #7d4e7d;
+   text-align: center;
+   padding: 15px;
+   color: #f9e4b7;
+   border-top: 3px solid #c9a052;
+   position: relative;
+   z-index: 1;
+}
